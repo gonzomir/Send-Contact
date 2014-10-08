@@ -1,0 +1,22 @@
+{
+  "name": "Send Contact",
+  "description": "Send contact as SMS text",
+  "launch_path": "/index.html",
+  "icons": {
+    "60": "/images/icon_60.png",
+    "128": "/images/icon_128.png",
+    "512": "/images/icon_512.png"
+  },
+  "version": "0.1",
+  "developer": {
+    "name": "Milen Petrinski - Gonzo",
+    "url": "http://greatgonzo.net"
+  },
+  "default_locale": "en",
+  "locales": {
+    "bg": {
+      "name" : "Изпрати контакт",
+      "description" : "Изпращане на име и телефон от контактите като SMS"
+    }
+  }
+}
