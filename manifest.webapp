@@ -1,6 +1,6 @@
 {
   "name": "Send Contact",
-  "description": "Send contact as SMS text",
+  "description": "Send contact name and phone as text message",
   "launch_path": "/index.html",
   "icons": {
     "60": "/images/icon_60.png",
@@ -16,7 +16,7 @@
   "locales": {
     "bg": {
       "name" : "Изпрати контакт",
-      "description" : "Изпращане на име и телефон от контактите като SMS"
+      "description" : "Изпращане на име и телефон от контактите като текстов SMS"
     }
   }
 }
