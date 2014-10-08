@@ -1,6 +1,8 @@
-var contact;
+var contact,
+    startBut = document.getElementById('start'),
+    sendBut = document.getElementById('send');
 
-document.getElementById('start').onclick = function(){
+startBut.onclick = function(){
   console.log('START');
   var pick = new MozActivity({
     name: "pick",
@@ -9,24 +11,20 @@ document.getElementById('start').onclick = function(){
     }
   });
 
-
-  console.log(pick);
-
   pick.onsuccess = function () {
-    console.log("got contact");
     contact = this.result;
     if( contact ){
-      console.log( "Name " + contact.name + " number "+ contact.number );
+      sendBut.removeAttribute('disabled');
     }
   };
 
   pick.onerror = function(){
-    console.log(this);
+    sendBut.setAttribute('disabled', 'disabled');
   }
 
 };
 
-document.getElementById('send').onclick = function(){
+sendBut.onclick = function(){
   if( contact ){
     var body = contact.name + ' ' + contact.number;
     var sms = new MozActivity({
@@ -38,11 +36,10 @@ document.getElementById('send').onclick = function(){
       }
     });
     sms.onsuccess = function(){
-      alert('contact sent');
     };
     sms.onerror = function(){
       console.log(this);
-      alert('error');
+      alert('Error');
     };
   }
 };

@@ -5,14 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
     <title>Send contact</title>
     <link href="style.css" rel="stylesheet" type="text/css">
+    <link href="style/headers.css" rel="stylesheet" type="text/css">
+    <link href="style/buttons.css" rel="stylesheet" type="text/css">
+    <link rel="resource" type="application/l10n" href="locales/locales.ini">
   </head>
   <body>
 
-    <h1>Send contact</h1>
+    <section role="region">
+      <header>
+        <h1 data-l10n-id="app-heading">Send Contact</h1>
+      </header>
+      <div class="content">
 
-    <button id="start">select contact</button>
+        <p>
+          <button id="start" data-l10n-id="select-button">Select contact</button>
+        </p>
+        <p>
+          <button id="send" data-l10n-id="send-button" disabled>Send as text</button>
+        </p>
 
-    <button id="send">select contact</button>
+      </div>
+    </section>
 
     <script src="script.js"></script>
 
